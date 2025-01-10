@@ -1,0 +1,130 @@
+h1{
+    font-size: 1.5em;/* フォントサイズ */
+    font-weight: bold;/* フォント太さ */  
+    font-family: serif; 
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-bottom: 2em;
+    border-bottom: solid 3px #111111;/* 線 */
+}
+
+#requestForm * {
+    font-family: serif; 
+}
+
+#requestForm {
+    font-size: 1.3em;/* フォントサイズ */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2em auto;
+  }
+  #requestForm #mainRequest {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    cursor: pointer;
+    text-overflow: ellipsis;/*テキストがオーバーしたら'...'で省略*/
+    z-index: 1;
+    /* 標準のスタイルを無効にしborder-bottomを設定 */
+    border: none;
+    appearance: none;
+    outline: none;
+    background: transparent;
+    border-radius: 0;
+    border-bottom: 1px solid #666666;
+  }
+  /*プルダウンの三角を設定*/
+  #requestForm::after {
+    position: absolute;
+    right: 15px;
+    content: '';
+    width: 16px;
+    height: 8px;
+    background: #666666;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+ 
+  /*focus時の設定*/
+  #requestForm #mainRequest:focus {
+    border-bottom: 1px solid transparent;
+  }
+
+
+
+
+
+  #subRequestContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2em auto;
+  }
+  #subRequestContainer #subRequest {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    cursor: pointer;
+    text-overflow: ellipsis;/*テキストがオーバーしたら'...'で省略*/
+    z-index: 1;
+    /* 標準のスタイルを無効にしborder-bottomを設定 */
+    border: none;
+    appearance: none;
+    outline: none;
+    background: transparent;
+    border-radius: 0;
+    border-bottom: 1px solid #666666;
+  }
+  /*プルダウンの三角を設定*/
+  #subRequestContainer::after {
+    position: absolute;
+    right: 15px;
+    content: '';
+    width: 16px;
+    height: 8px;
+    background: #666666;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+ 
+  /*focus時の設定*/
+  #subRequestContainer #subRequest:focus {
+    border-bottom: 1px solid transparent;
+  }
+
+
+
+
+
+
+
+
+
+  #submitButton {
+    font-family: serif; 
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	width: 200px;
+	margin: auto;
+	padding: 1rem 4rem;
+	font-weight: bold;
+	border: 2px solid #000000;
+	color: #000000;
+	transition: 0.5s;
+}
+#submitButton:hover {
+	color: #fff;
+	background: #000000;
+}
+
+#result{
+    font-family: serif; 
+}
+
+#result img {
+    width: 300px;  /* 幅を300pxに設定 */
+    height: 200px; /* 高さを200pxに設定 */
+    object-fit: cover; /* 画像が歪まずに中央部分が表示されるようにする */
+}
